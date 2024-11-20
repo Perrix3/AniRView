@@ -5,7 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
+import android.widget.ImageView;
+import com.bumptech.glide.Glide;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -60,6 +61,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        ImageView imageView1 = findViewById(R.id.profileImage);
+        String imageUrl1 = "https://avatarfiles.alphacoders.com/331/thumb-1920-331314.jpg";
+        Glide.with(this)
+                .load(imageUrl1)
+                .into(imageView1);
     }
 }

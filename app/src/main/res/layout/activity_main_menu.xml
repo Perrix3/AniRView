@@ -56,7 +56,6 @@ app:layout_constraintEnd_toEndOf="parent">
         android:layout_width="120dp"
         android:layout_height="160dp"
         android:layout_marginEnd="8dp"
-        android:src="@drawable/slime"
         android:contentDescription="@string/rSlime"
         android:clickable="true"
         android:focusable="true" />
@@ -66,7 +65,6 @@ app:layout_constraintEnd_toEndOf="parent">
         android:layout_width="120dp"
         android:layout_height="160dp"
         android:layout_marginEnd="8dp"
-        android:src="@drawable/fate"
         android:contentDescription="@string/rFate"
         android:clickable="true"
         android:focusable="true" />
@@ -76,7 +74,6 @@ app:layout_constraintEnd_toEndOf="parent">
         android:layout_width="120dp"
         android:layout_height="160dp"
         android:layout_marginEnd="8dp"
-        android:src="@drawable/nokotan"
         android:contentDescription="@string/rNokotan"
         android:clickable="true"
         android:focusable="true" />
@@ -99,54 +96,51 @@ app:layout_constraintTop_toBottomOf="@id/newReviewsScroll"
 app:layout_constraintStart_toStartOf="parent"
 android:layout_marginStart="16dp" />
 
-<HorizontalScrollView
-android:id="@+id/userReviewsScroll"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:layout_marginTop="8dp"
-app:layout_constraintTop_toBottomOf="@id/userReviewsLabel"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintEnd_toEndOf="parent">
+    <HorizontalScrollView
+        android:id="@+id/userReviewsScroll"
+        android:layout_width="match_parent"
+        android:layout_height="161dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userReviewsLabel">
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <!-- Fotos -->
-    <ImageView
-        android:id="@+id/userReviewImage1"
-        android:layout_width="120dp"
-        android:layout_height="160dp"
-        android:layout_marginEnd="8dp"
-        android:src="@drawable/jjk"
-        android:contentDescription="@string/rJJK"
-        android:clickable="true"
-        android:focusable="true" />
+            <!-- Fotos -->
+            <ImageView
+                android:id="@+id/userReviewImage1"
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:contentDescription="@string/rJJK"
+                android:focusable="true" />
 
-    <ImageView
-        android:id="@+id/userReviewImage2"
-        android:layout_width="120dp"
-        android:layout_height="160dp"
-        android:layout_marginEnd="8dp"
-        android:src="@drawable/eva"
-        android:contentDescription="@string/rEva"
-        android:clickable="true"
-        android:focusable="true" />
+            <ImageView
+                android:id="@+id/userReviewImage2"
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:contentDescription="@string/rEva"
+                android:focusable="true" />
 
-    <ImageView
-        android:id="@+id/userReviewImage3"
-        android:layout_width="120dp"
-        android:layout_height="160dp"
-        android:layout_marginEnd="8dp"
-        android:src="@drawable/panzer"
-        android:contentDescription="@string/rPanzer"
-        android:clickable="true"
-        android:focusable="true" />
-    <!-- Añadir -->
+            <ImageView
+                android:id="@+id/userReviewImage3"
+                android:layout_width="122dp"
+                android:layout_height="160dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:contentDescription="@string/rPanzer"
+                android:focusable="true" />
+            <!-- Añadir -->
 
-</LinearLayout>
-</HorizontalScrollView>
+        </LinearLayout>
+    </HorizontalScrollView>
 
     <!-- Nav Bar -->
 <LinearLayout
@@ -180,6 +174,7 @@ app:layout_constraintBottom_toBottomOf="parent">
     android:layout_height="40dp"
     android:layout_margin="8dp"
     android:src="@drawable/back"
+    android:background="@android:color/black"
     android:contentDescription="@string/iBack" />
 </LinearLayout>
 
