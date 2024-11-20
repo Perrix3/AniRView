@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".MainActivity" >
+
+    <!-- Title -->
+<TextView
+android:id="@+id/title"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="¿Qué reseña quieres ver hoy?"
+android:textColor="@color/white"
+android:textSize="20sp"
+android:textStyle="bold"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+android:layout_marginTop="50dp" />
+
+    <!-- New Reviews Section -->
+<TextView
+android:id="@+id/newReviewsLabel"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Nuevas reseñas en el equipo"
+android:textColor="@color/white"
+android:textSize="16sp"
+android:layout_marginTop="20dp"
+app:layout_constraintTop_toBottomOf="@id/title"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintMarginStart="16dp" />
+
+<HorizontalScrollView
+android:id="@+id/newReviewsScroll"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="8dp"
+app:layout_constraintTop_toBottomOf="@id/newReviewsLabel"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent">
+
+    <!-- Primera seccion de animes -->
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <!-- Fotos de los animes -->
+    <ImageView
+        android:id="@+id/reviewImage1"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/slime"
+        android:contentDescription="@string/rSlime"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <ImageView
+        android:id="@+id/reviewImage2"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/fate"
+        android:contentDescription="@string/rFate"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <ImageView
+        android:id="@+id/reviewImage3"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/nokotan"
+        android:contentDescription="@string/rNokotan"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Para añadir mas -->
+
+</LinearLayout>
+</HorizontalScrollView>
+
+    <!-- Segunda seccion de animes -->
+<TextView
+android:id="@+id/userReviewsLabel"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Reseñas de usuarios"
+android:textColor="@color/white"
+android:textSize="16sp"
+android:layout_marginTop="20dp"
+app:layout_constraintTop_toBottomOf="@id/newReviewsScroll"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintMarginStart="16dp" />
+
+<HorizontalScrollView
+android:id="@+id/userReviewsScroll"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="8dp"
+app:layout_constraintTop_toBottomOf="@id/userReviewsLabel"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent">
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <!-- Fotos -->
+    <ImageView
+        android:id="@+id/userReviewImage1"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/jjk"
+        android:contentDescription="@string/rJJK"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <ImageView
+        android:id="@+id/userReviewImage2"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/eva"
+        android:contentDescription="@string/rEva"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <ImageView
+        android:id="@+id/userReviewImage3"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/panzer"
+        android:contentDescription="@string/rPanzer"
+        android:clickable="true"
+        android:focusable="true" />
+    <!-- Añadir -->
+
+</LinearLayout>
+</HorizontalScrollView>
+
+    <!-- Nav Bar -->
+<LinearLayout
+android:id="@+id/bottomNavBar"
+android:layout_width="match_parent"
+android:layout_height="60dp"
+android:background="@color/black"
+android:orientation="horizontal"
+android:gravity="center"
+app:layout_constraintBottom_toBottomOf="parent">
+
+<ImageView
+    android:id="@+id/icon1"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_margin="8dp"
+    android:src="@drawable/eye"
+    android:contentDescription="@string/iEye" />
+
+<ImageView
+    android:id="@+id/iconCenter"
+    android:layout_width="90dp"
+    android:layout_height="90dp"
+    android:layout_margin="0dp"
+    android:src="@drawable/plus"
+    android:contentDescription="@string/iPlus" />
+
+<ImageView
+    android:id="@+id/icon3"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_margin="8dp"
+    android:src="@drawable/back"
+    android:contentDescription="@string/iBack" />
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
