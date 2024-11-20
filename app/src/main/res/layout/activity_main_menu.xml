@@ -152,7 +152,7 @@ android:orientation="horizontal"
 android:gravity="center"
 app:layout_constraintBottom_toBottomOf="parent">
 
-<ImageView
+<ImageButton
     android:id="@+id/icon1"
     android:layout_width="40dp"
     android:layout_height="40dp"

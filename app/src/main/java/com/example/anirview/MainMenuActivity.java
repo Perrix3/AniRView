@@ -26,6 +26,19 @@ public class MainMenuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Button to go to WatchActivity
+        ImageButton icon1 = findViewById(R.id.icon1);
+        icon1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start the WatchActivity on click
+                Intent intent = new Intent(MainMenuActivity.this, WatchActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Glide
         ImageView imageView = findViewById(R.id.reviewImage1);
         String imageUrl = "https://static.wikia.nocookie.net/wikiseriesjaponesas/images/f/fd/Tensei_shitara_Slime_Datta_Ken_%28Anime%29.jpg/revision/latest?cb=20181207131602&path-prefix=es";
         Glide.with(this)
