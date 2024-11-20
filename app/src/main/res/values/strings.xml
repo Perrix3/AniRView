@@ -36,6 +36,9 @@
     <string name="sSlime">2018    Acción-Fantasía-Isekai   72 EPs.</string>
     <string name="RSlime">Es un isekai divertido y refrescante, que sigue a un hombre reencarnado como slime en un mundo de fantasía. Con un tono optimista y un protagonista carismático, la serie combina acción, comedia y una construcción de mundo interesante, destacando por su enfoque en la cooperación y la inclusión. Aunque tiene algunos clichés, es una propuesta entretenida y ligera dentro del género.</string>
     <string name="startText">Mira aquí las reseñas de tus animes favoritos, lo que nos ha parecido al equipo de desarrolladores y por supuesto las experiencias de los usuarios :D</string>
+    <string name="whatReview">¿Qué reseña quieres ver hoy?</string>
+    <string name="teamReviews">Nuevas reseñas en el equipo</string>
+    <string name="userReviews">Reseñas de usuarios</string>
 
 </resources>
 

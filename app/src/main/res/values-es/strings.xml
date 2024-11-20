@@ -21,4 +21,7 @@
     <string name="startText">Mira aquí las reseñas de tus animes favoritos, lo que nos ha parecido al equipo de desarrolladores y por supuesto las experiencias de los usuarios :D</string>
     <string name="iEye">Icono de Ojo</string>
     <string name="iPlus">Icono de más</string>
+    <string name="whatReview">¿Qué reseña quieres ver hoy?</string>
+    <string name="teamReviews">Nuevas reseñas en el equipo</string>
+    <string name="userReviews">Reseñas de usuarios</string>
 </resources>
