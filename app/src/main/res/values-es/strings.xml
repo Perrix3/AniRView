@@ -8,6 +8,7 @@
     <string name="rEva">Neon Genesis Evangelion</string>
     <string name="rPanzer">Girls und Panzer</string>
     <string name="RFate">"Es una serie de acción y fantasía ambientada en un universo alternativo de Fate, donde la Guerra del Santo Grial se libra entre dos facciones opuestas: los Rojos y los Negros, cada una compuesta por siete magos y sus Servants. La historia sigue a un grupo de héroes legendarios que luchan por conseguir el Grial, mientras se enfrentan a conspiraciones y traiciones. Ofrece una narrativa emocionante, aunque más centrada en la acción que en la profundidad emocional de otras entregas de la saga Fate.    "</string>
+    <string name="RPanzer">Girls und Panzer mezcla géneros como acción, comedia y deportes, con un enfoque único en el giro militar de batallas de tanques. La historia sigue a un grupo de chicas que participan en un deporte llamado sensha-dō, que consiste en combates de tanques, dentro de un mundo donde la guerra de tanques es un deporte tradicional. A pesar de la acción, lo que realmente destaca es la comedia ligera, el trabajo en equipo y la estrategia en los combates. Es un anime que combina diversión con una dosis de táctica militar, siendo un espectáculo entretenido y lleno de personajes carismáticos.</string>
     <string name="back">Volver</string>
     <string name="login">Iniciar Sesion</string>
     <string name="createAccout">Crear Cuenta</string>
@@ -19,6 +20,7 @@
     <string name="pass">Contraseña</string>
     <string name="sSlime">2018    Acción-Fantasía-Isekai   72 EPs.</string>
     <string name="sFate">2017    Acción-Fantasía   25 EPs.</string>
+    <string name="sPanzer">2012  Acción-comedia-militar  18 EPs.</string>
     <string name="RSlime">Es un isekai divertido y refrescante, que sigue a un hombre reencarnado como slime en un mundo de fantasía. Con un tono optimista y un protagonista carismático, la serie combina acción, comedia y una construcción de mundo interesante, destacando por su enfoque en la cooperación y la inclusión. Aunque tiene algunos clichés, es una propuesta entretenida y ligera dentro del género.</string>
     <string name="startText">Mira aquí las reseñas de tus animes favoritos, lo que nos ha parecido al equipo de desarrolladores y por supuesto las experiencias de los usuarios :D</string>
     <string name="iEye">Icono de Ojo</string>
@@ -26,4 +28,10 @@
     <string name="whatReview">¿Qué reseña quieres ver hoy?</string>
     <string name="teamReviews">Nuevas reseñas en el equipo</string>
     <string name="userReviews">Reseñas de usuarios</string>
+    <string name="sNokotan">2024    Comedia-Absurdo-Escolar   12 EPs.</string>
+    <string name="sJJK">2020   Comedia-Shonen-Accion   47 EPs.</string>
+    <string name="sNeon">1995   Ciencia ficción-mecha-psicológico   26 EPs.</string>
+    <string name="RNokotan">Shikanoko Nokonoko Koshitantan es una comedia escolar sobre Torako Koshi, una chica popular que rescata a Noko, una extraña chica-ciervo, que se transfiere a su escuela y empieza a involucrarla en situaciones extravagantes. Mientras Torako lucha por mantener su imagen de chica perfecta, Noko amenaza con exponer su pasado como una ex-delincuente yanqui. La serie mezcla comedia, caos y momentos absurdos, creando una trama ligera y divertida con personajes peculiares y situaciones inusuales.</string>
+    <string name="RJJK">Jujutsu Kaisen es un anime increíble que mezcla acción, magia y drama de manera perfecta. Sigue a Yuji Itadori, un chico que se ve arrastrado al mundo de las maldiciones tras tragar un objeto maldito. La serie tiene peleas impresionantes, personajes con mucho carisma como Satoru Gojo y Megumi, y una trama que te mantiene enganchado. La animación es espectacular, especialmente en las batallas, y el desarrollo de los personajes te hace sentir conectado con ellos. Si te gustan los animes con acción intensa y momentos emocionantes, definitivamente Jujutsu Kaisen es para ti.</string>
+    <string name="RNeon">Neon Genesis Evangelion mezcla varios géneros, principalmente mecha, drama psicológico, ciencia ficción y terror psicológico. La serie sigue a Shinji Ikari, quien pilota un EVA para luchar contra los Ángeles, pero lo que realmente destaca es el enfoque en los traumas y conflictos internos de los personajes. Además, incluye elementos de religión y filosofía, haciendo de la trama algo mucho más complejo que solo batallas. Es un anime que te hace reflexionar sobre la naturaleza humana y la existencia.</string>
 </resources>

@@ -10,6 +10,7 @@
     <string name="rJJK">Jujutsu Kaisen</string>
     <string name="rFate">Fate/Apocrypha</string>
     <string name="RFate">It is an action and fantasy series set in an alternate universe of Fate, where the Holy Grail War is fought between two opposing factions: the Reds and the Blacks, each composed of seven mages and their Servants. The story follows a group of legendary heroes who fight to obtain the Grail while facing conspiracies and betrayals. It offers an exciting narrative, although it is more focused on action than on the emotional depth found in other installments of the Fate saga.</string>
+    <string name="RPanzer">a</string>
     <string name="back">Back</string>
     <string name="login">Log in</string>
     <string name="createAccout">Create Account</string>
@@ -21,9 +22,16 @@
     <string name="pass">Password</string>
     <string name="sSlime">2018    Action-Fantasy-Isekai   72 EPs.</string>
     <string name="sFate">2017    Action-Fantasy   25 EPs.</string>
+    <string name="sPanzer">a</string>
     <string name="RSlime">It is a fun and refreshing isekai that follows a man reincarnated as a slime in a fantasy world. With an optimistic tone and a charismatic protagonist, the series combines action, comedy, and an interesting world-building, highlighting its focus on cooperation and inclusion. Although it has some clichés, it is an entertaining and light proposal within the genre.</string>
     <string name="startText">Check out the reviews of your favorite animes, what our development team thinks, and of course, the experiences of the users :D</string>
     <string name="whatReview">What review do you want to see today?</string>
     <string name="teamReviews">New reviews on the team</string>
     <string name="userReviews">User reviews</string>
+    <string name="sNokotan">a</string>
+    <string name="sJJK">a</string>
+    <string name="sNeon">a</string>
+    <string name="RNokotan">a</string>
+    <string name="RJJK">a</string>
+    <string name="RNeon">a</string>
 </resources>

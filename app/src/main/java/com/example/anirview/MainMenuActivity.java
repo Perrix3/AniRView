@@ -95,6 +95,46 @@ public class MainMenuActivity extends AppCompatActivity {
                     imageUrl2
             );
         });
+
+        imageView3.setOnClickListener(v -> {
+            launchReviewActivity(
+                    R.string.rNokotan,
+                    R.string.sNokotan,
+                    R.string.RNokotan,
+                    4.5,
+                    imageUrl3
+            );
+        });
+
+        imageView4.setOnClickListener(v -> {
+            launchReviewActivity(
+                    R.string.rJJK,
+                    R.string.sJJK,
+                    R.string.RJJK,
+                    4.5,
+                    imageUrl4
+            );
+        });
+
+        imageView5.setOnClickListener(v -> {
+            launchReviewActivity(
+                    R.string.rEva,
+                    R.string.sNeon,
+                    R.string.RNeon,
+                    4.5,
+                    imageUrl5
+            );
+        });
+
+        imageView6.setOnClickListener(v -> {
+            launchReviewActivity(
+                    R.string.rPanzer,
+                    R.string.sPanzer,
+                    R.string.RPanzer,
+                    4.5,
+                    imageUrl6
+            );
+        });
     }
 
     private void launchReviewActivity(int titleResId, int subtitleResId, int reviewResId, double rating, String imageUrl) {
