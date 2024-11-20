@@ -74,5 +74,42 @@ public class MainMenuActivity extends AppCompatActivity {
         Glide.with(this)
                 .load(imageUrl6)
                 .into(imageView6);
+
+        // Set up click listeners for each anime
+        imageView.setOnClickListener(v -> {
+            launchReviewActivity(
+                    R.string.rSlime,
+                    R.string.sSlime,
+                    R.string.RSlime,
+                    4.0,
+                    imageUrl
+            );
+        });
+
+        imageView2.setOnClickListener(v -> {
+            launchReviewActivity(
+                    R.string.rFate,
+                    R.string.sFate,
+                    R.string.RFate,
+                    4.5,
+                    imageUrl2
+            );
+        });
     }
-}
+
+    private void launchReviewActivity(int titleResId, int subtitleResId, int reviewResId, double rating, String imageUrl) {
+        Intent intent = new Intent(this, ReviewActivity.class);
+        intent.putExtra("TITLE_RES_ID", titleResId);
+        intent.putExtra("SUBTITLE_RES_ID", subtitleResId);
+        intent.putExtra("REVIEW_RES_ID", reviewResId);
+        intent.putExtra("RATING", rating);
+        intent.putExtra("IMAGE_URL", imageUrl);
+        startActivity(intent);
+    }
+
+
+
+
+
+    }
+

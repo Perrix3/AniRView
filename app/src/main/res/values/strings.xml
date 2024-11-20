@@ -13,6 +13,14 @@
     <string name="rEva">Neon Genesis Evangelion</string>
     <string name="rPanzer">Girls und Panzer</string>
 
+    <!-- Anime Subtitles -->
+    <string name="sSlime">2018    Acción-Fantasía-Isekai   72 EPs.</string>
+    <string name="sFate">2017    Acción-Fantasía   25 EPs.</string>
+
+    <!-- Anime Reviews -->
+    <string name="RSlime">Es un isekai divertido y refrescante, que sigue a un hombre reencarnado como slime en un mundo de fantasía. Con un tono optimista y un protagonista carismático, la serie combina acción, comedia y una construcción de mundo interesante, destacando por su enfoque en la cooperación y la inclusión. Aunque tiene algunos clichés, es una propuesta entretenida y ligera dentro del género.</string>
+    <string name="RFate">"Es una serie de acción y fantasía ambientada en un universo alternativo de Fate, donde la Guerra del Santo Grial se libra entre dos facciones opuestas: los Rojos y los Negros, cada una compuesta por siete magos y sus Servants. La historia sigue a un grupo de héroes legendarios que luchan por conseguir el Grial, mientras se enfrentan a conspiraciones y traiciones. Ofrece una narrativa emocionante, aunque más centrada en la acción que en la profundidad emocional de otras entregas de la saga Fate.    "</string>
+
     <!-- Buttons -->
     <string name="back">Volver</string>
     <string name="login">Iniciar Sesion</string>
@@ -33,12 +41,12 @@
     <string name="pass">Contraseña</string>
 
     <!-- Texts -->
-    <string name="sSlime">2018    Acción-Fantasía-Isekai   72 EPs.</string>
-    <string name="RSlime">Es un isekai divertido y refrescante, que sigue a un hombre reencarnado como slime en un mundo de fantasía. Con un tono optimista y un protagonista carismático, la serie combina acción, comedia y una construcción de mundo interesante, destacando por su enfoque en la cooperación y la inclusión. Aunque tiene algunos clichés, es una propuesta entretenida y ligera dentro del género.</string>
     <string name="startText">Mira aquí las reseñas de tus animes favoritos, lo que nos ha parecido al equipo de desarrolladores y por supuesto las experiencias de los usuarios :D</string>
     <string name="whatReview">¿Qué reseña quieres ver hoy?</string>
     <string name="teamReviews">Nuevas reseñas en el equipo</string>
     <string name="userReviews">Reseñas de usuarios</string>
+
+
 
 </resources>
 
