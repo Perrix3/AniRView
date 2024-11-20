@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="iEye">Eye Icon</string>
+    <string name="iPlus">Plus Icon</string>
+    <string name="iBack">Back Icon</string>
+    <string name="rNokotan">My Deer Friend Nokotan</string>
+    <string name="rEva">Neon Genesis Evangelion</string>
+    <string name="rPanzer">Girls und Panzer</string>
+    <string name="rSlime">That Time I Got Reincarnated as a Slime</string>
+    <string name="rJJK">Jujutsu Kaisen</string>
+    <string name="rFate">Fate/Apocrypha</string>
+    <string name="back">Back</string>
+    <string name="login">Log in</string>
+    <string name="createAccout">Create Account</string>
+    <string name="start">Start watching</string>
+    <string name="forgot">Forgot Password?</string>
+    <string name="watch">In our project, we do not recommend anything related to piracy, but we always recommend using reliable options such as:</string>
+    <string name="where">Where to watch anime?</string>
+    <string name="email">Email</string>
+    <string name="pass">Password</string>
+    <string name="sSlime">2018    Action-Fantasy-Isekai   72 EPs.</string>
+    <string name="RSlime">It is a fun and refreshing isekai that follows a man reincarnated as a slime in a fantasy world. With an optimistic tone and a charismatic protagonist, the series combines action, comedy, and an interesting world-building, highlighting its focus on cooperation and inclusion. Although it has some clichés, it is an entertaining and light proposal within the genre.</string>
+    <string name="startText">Check out the reviews of your favorite animes, what our development team thinks, and of course, the experiences of the users :D</string>
+</resources>
