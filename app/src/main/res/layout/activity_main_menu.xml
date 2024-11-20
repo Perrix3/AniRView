@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
-    tools:context=".MainActivity" >
+    tools:context=".MainMenuActivity" >
 
     <!-- Title -->
 <TextView
@@ -33,7 +33,7 @@ android:textSize="16sp"
 android:layout_marginTop="20dp"
 app:layout_constraintTop_toBottomOf="@id/title"
 app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintMarginStart="16dp" />
+android:layout_marginStart="16dp" />
 
 <HorizontalScrollView
 android:id="@+id/newReviewsScroll"
@@ -97,7 +97,7 @@ android:textSize="16sp"
 android:layout_marginTop="20dp"
 app:layout_constraintTop_toBottomOf="@id/newReviewsScroll"
 app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintMarginStart="16dp" />
+android:layout_marginStart="16dp" />
 
 <HorizontalScrollView
 android:id="@+id/userReviewsScroll"
@@ -174,7 +174,7 @@ app:layout_constraintBottom_toBottomOf="parent">
     android:src="@drawable/plus"
     android:contentDescription="@string/iPlus" />
 
-<ImageView
+<ImageButton
     android:id="@+id/icon3"
     android:layout_width="40dp"
     android:layout_height="40dp"
