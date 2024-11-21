@@ -6,11 +6,12 @@
     <string name="rNokotan">My Deer Friend Nokotan</string>
     <string name="rEva">Neon Genesis Evangelion</string>
     <string name="rPanzer">Girls und Panzer</string>
+    <string name="iHeart">Heart Icon</string>
     <string name="rSlime">That Time I Got Reincarnated as a Slime</string>
     <string name="rJJK">Jujutsu Kaisen</string>
     <string name="rFate">Fate/Apocrypha</string>
     <string name="RFate">It is an action and fantasy series set in an alternate universe of Fate, where the Holy Grail War is fought between two opposing factions: the Reds and the Blacks, each composed of seven mages and their Servants. The story follows a group of legendary heroes who fight to obtain the Grail while facing conspiracies and betrayals. It offers an exciting narrative, although it is more focused on action than on the emotional depth found in other installments of the Fate saga.</string>
-    <string name="RPanzer">a</string>
+    <string name="RPanzer">Girls und Panzer blends genres such as action, comedy, and sports, with a unique focus on the military twist of tank battles. The story follows a group of girls who participate in a sport called sensha-dō, which involves tank combat, in a world where tank warfare is a traditional sport. Despite the action, what truly stands out is the lighthearted comedy, teamwork, and strategy in the battles. It’s an anime that combines fun with a dose of military tactics, making it an entertaining spectacle filled with charismatic characters.</string>
     <string name="back">Back</string>
     <string name="login">Log in</string>
     <string name="createAccout">Create Account</string>
@@ -22,16 +23,16 @@
     <string name="pass">Password</string>
     <string name="sSlime">2018    Action-Fantasy-Isekai   72 EPs.</string>
     <string name="sFate">2017    Action-Fantasy   25 EPs.</string>
-    <string name="sPanzer">a</string>
+    <string name="sPanzer">2012  Action-comedy-military  18 EPs.</string>
     <string name="RSlime">It is a fun and refreshing isekai that follows a man reincarnated as a slime in a fantasy world. With an optimistic tone and a charismatic protagonist, the series combines action, comedy, and an interesting world-building, highlighting its focus on cooperation and inclusion. Although it has some clichés, it is an entertaining and light proposal within the genre.</string>
     <string name="startText">Check out the reviews of your favorite animes, what our development team thinks, and of course, the experiences of the users :D</string>
     <string name="whatReview">What review do you want to see today?</string>
     <string name="teamReviews">New reviews on the team</string>
     <string name="userReviews">User reviews</string>
-    <string name="sNokotan">a</string>
-    <string name="sJJK">a</string>
-    <string name="sNeon">a</string>
-    <string name="RNokotan">a</string>
-    <string name="RJJK">a</string>
-    <string name="RNeon">a</string>
+    <string name="sNokotan">2024    Absurd-Comedy-School   12 EPs.</string>
+    <string name="sJJK">2020   Comedy-Shonen-Action   47 EPs.</string>
+    <string name="sNeon">1995   Science Fiction-Mecha-Psychological   26 EPs.</string>
+    <string name="RNokotan">Shikanoko Nokonoko Koshitantan is a school comedy about Torako Koshi, a popular girl who rescues Noko, a strange deer-girl who transfers to her school and starts involving her in extravagant situations. As Torako struggles to maintain her image as the perfect girl, Noko threatens to expose her past as a former yankee delinquent. The series blends comedy, chaos, and absurd moments, creating a light and fun plot with quirky characters and unusual situations.</string>
+    <string name="RJJK">Jujutsu Kaisen is an incredible anime that perfectly blends action, magic, and drama. It follows Yuji Itadori, a boy who gets dragged into the world of curses after swallowing a cursed object. The series features stunning battles, charismatic characters like Satoru Gojo and Megumi, and a plot that keeps you hooked. The animation is spectacular, especially during the battles, and the character development makes you feel connected to them. If you enjoy anime with intense action and exciting moments, Jujutsu Kaisen is definitely for you.</string>
+    <string name="RNeon">Neon Genesis Evangelion blends various genres, primarily mecha, psychological drama, science fiction, and psychological horror. The series follows Shinji Ikari, who pilots an EVA to fight against the Angels, but what truly stands out is the focus on the traumas and internal conflicts of the characters. Additionally, it includes elements of religion and philosophy, making the plot much more complex than just battles. It\'s an anime that makes you reflect on human nature and existence.</string>
 </resources>
