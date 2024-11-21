@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         String imageUrl1 = "https://avatarfiles.alphacoders.com/331/thumb-1920-331314.jpg";
         Glide.with(this)
                 .load(imageUrl1)
+                .transform(new RoundedCorners(256))
                 .into(imageView1);
     }
 }
