@@ -1,5 +1,7 @@
 package com.example.anirview;
 
+import static android.provider.Telephony.Mms.Part.FILENAME;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -7,15 +9,29 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 
 public class MainMenuActivity extends AppCompatActivity {
+
+    private LinearLayout userReviewsLayout;
+    private static final String FILENAME = "reviews.json";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-
+        userReviewsLayout = findViewById(R.id.userReviewsLayout);
+        loadReviews();
         // Button to go back to main activity
         ImageButton icon3 = findViewById(R.id.icon3);
         icon3.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +53,18 @@ public class MainMenuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        ImageButton iconCenter = findViewById(R.id.iconCenter);
+        iconCenter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start the WatchActivity on click
+                Intent intent = new Intent(MainMenuActivity.this, AddReviewActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         // Glide
         ImageView imageView = findViewById(R.id.reviewImage1);
@@ -135,6 +163,39 @@ public class MainMenuActivity extends AppCompatActivity {
                     imageUrl6
             );
         });
+    }
+
+
+    private void loadReviews() {
+        ArrayList<AddReviewActivity.Review> reviews = loadReviewsFromJSON();
+
+        LinearLayout userReviewsLayout = findViewById(R.id.userReviewsScroll).findViewById(R.id.userReviewsLayout);
+
+        for (AddReviewActivity.Review review : reviews) {
+            // Create new ImageView and other UI elements to display the review
+            ImageView imageView = new ImageView(this);
+            Glide.with(this).load(review.getPosterUrl()).into(imageView);
+            userReviewsLayout.addView(imageView);
+        }
+    }
+
+    private ArrayList<AddReviewActivity.Review> loadReviewsFromJSON() {
+        ArrayList<AddReviewActivity.Review> reviews = new ArrayList<>();
+
+        try (FileInputStream fis = openFileInput(FILENAME)) {
+            byte[] buffer = new byte[fis.available()];
+            fis.read(buffer);
+            String json = new String(buffer);
+
+            Gson gson = new Gson();
+            Type reviewListType = new TypeToken<ArrayList<AddReviewActivity.Review>>(){}.getType();
+            reviews = gson.fromJson(json, reviewListType);
+        } catch (IOException e) {
+            // No file found, return an empty list
+            e.printStackTrace();
+        }
+
+        return reviews;
     }
 
     private void launchReviewActivity(int titleResId, int subtitleResId, int reviewResId, double rating, String imageUrl) {

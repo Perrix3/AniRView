@@ -35,9 +35,8 @@
         android:inputType="textCapWords"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_margin="32dp"
         app:layout_constraintTop_toBottomOf="@id/titleText"
-        tools:ignore="TouchTargetSizeCheck" />
+         />
 
     <EditText
         android:id="@+id/score"
@@ -52,7 +51,6 @@
         android:maxLength="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_margin="24dp"
         app:layout_constraintTop_toBottomOf="@id/title"
         tools:ignore="TouchTargetSizeCheck" />
 
@@ -60,15 +58,15 @@
         android:id="@+id/subtitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:textColorHint="@color/gray2"
-        android:hint="@string/subHint"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:hint="@string/subHint"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/gray2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/score"
-        app:layout_constraintTop_margin="24dp"/>
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/review"
@@ -84,7 +82,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/subtitle"
-        app:layout_constraintTop_margin="24dp"/>
+        />
 
     <EditText
         android:id="@+id/poster_url"
@@ -98,7 +96,6 @@
         android:inputType="textUri"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_margin="24dp"
         app:layout_constraintTop_toBottomOf="@id/review"
         tools:ignore="TouchTargetSizeCheck" />
 
@@ -110,7 +107,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/poster_url"
-        app:layout_constraintTop_margin="64dp"
         android:layout_marginTop="48dp">
 
         <Button
