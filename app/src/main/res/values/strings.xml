@@ -36,6 +36,8 @@
     <string name="createAccout">Crear Cuenta</string>
     <string name="start">Empieza a ver</string>
     <string name="forgot">¿Contraseña Olvidada?</string>
+    <string name="cancel">Cancel</string>
+    <string name="addR">Add Review</string>
 
     <!-- Where to watch -->
     <string name="watch">En nuestro proyecto no recomendamos nada relacionado con la piratería, pero recomendamos siempre usar opciones fiables como:</string>
@@ -54,7 +56,14 @@
     <string name="whatReview">¿Qué reseña quieres ver hoy?</string>
     <string name="teamReviews">Nuevas reseñas en el equipo</string>
     <string name="userReviews">Reseñas de usuarios</string>
+    <string name="add">Review your favourite anime!</string>
 
+    <!-- Hints -->
+    <string name="titleHint">Anime Title</string>
+    <string name="scoreHint">Score (0 to 5)</string>
+    <string name="subHint">Date Released, Genres, Episodes</string>
+    <string name="yourHint">Your Review</string>
+    <string name="posterHint">Poster URL</string>
 
 
 </resources>

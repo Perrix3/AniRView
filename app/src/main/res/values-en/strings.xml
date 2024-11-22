@@ -17,6 +17,7 @@
     <string name="createAccout">Create Account</string>
     <string name="start">Start watching</string>
     <string name="forgot">Forgot Password?</string>
+    <string name="addR">Add Review</string>
     <string name="watch">In our project, we do not recommend anything related to piracy, but we always recommend using reliable options such as:</string>
     <string name="where">Where to watch anime?</string>
     <string name="email">Email</string>
@@ -35,4 +36,11 @@
     <string name="RNokotan">Shikanoko Nokonoko Koshitantan is a school comedy about Torako Koshi, a popular girl who rescues Noko, a strange deer-girl who transfers to her school and starts involving her in extravagant situations. As Torako struggles to maintain her image as the perfect girl, Noko threatens to expose her past as a former yankee delinquent. The series blends comedy, chaos, and absurd moments, creating a light and fun plot with quirky characters and unusual situations.</string>
     <string name="RJJK">Jujutsu Kaisen is an incredible anime that perfectly blends action, magic, and drama. It follows Yuji Itadori, a boy who gets dragged into the world of curses after swallowing a cursed object. The series features stunning battles, charismatic characters like Satoru Gojo and Megumi, and a plot that keeps you hooked. The animation is spectacular, especially during the battles, and the character development makes you feel connected to them. If you enjoy anime with intense action and exciting moments, Jujutsu Kaisen is definitely for you.</string>
     <string name="RNeon">Neon Genesis Evangelion blends various genres, primarily mecha, psychological drama, science fiction, and psychological horror. The series follows Shinji Ikari, who pilots an EVA to fight against the Angels, but what truly stands out is the focus on the traumas and internal conflicts of the characters. Additionally, it includes elements of religion and philosophy, making the plot much more complex than just battles. It\'s an anime that makes you reflect on human nature and existence.</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Review your favourite anime!</string>
+    <string name="titleHint">Anime Title</string>
+    <string name="scoreHint">Score (0 to 5)</string>
+    <string name="subHint">Date Released, Genres, Episodes</string>
+    <string name="yourHint">Your Review</string>
+    <string name="posterHint">Poster URL</string>
 </resources>
