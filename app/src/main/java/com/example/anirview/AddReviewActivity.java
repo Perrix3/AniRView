@@ -73,10 +73,14 @@ public class AddReviewActivity extends AppCompatActivity {
         // Save the review to the JSON file
         saveReviewToJSON(newReview);
 
+        // Close MainMenuActivity, so it does the onCreate() again
+        MainMenuActivity.closeMainMenu();
+
         // Toast to indicate the review was added
         Toast.makeText(this, "Review Added Successfully!", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(AddReviewActivity.this, MainMenuActivity.class);
         startActivity(intent);
+        finish();
     }
 
     private void saveReviewToJSON(Review review) {

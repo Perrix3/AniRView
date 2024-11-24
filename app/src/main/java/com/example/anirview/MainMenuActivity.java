@@ -22,6 +22,7 @@ import java.util.ArrayList;
 
 public class MainMenuActivity extends AppCompatActivity {
 
+    private static MainMenuActivity instance;
     private LinearLayout userReviewsLayout;
     private static final String FILENAME = "reviews.json";
 
@@ -30,6 +31,7 @@ public class MainMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
+        instance=this;
         userReviewsLayout = findViewById(R.id.userReviewsLayout);
         loadReviews();
         // Button to go back to main activity
@@ -169,15 +171,39 @@ public class MainMenuActivity extends AppCompatActivity {
     private void loadReviews() {
         ArrayList<AddReviewActivity.Review> reviews = loadReviewsFromJSON();
 
-        LinearLayout userReviewsLayout = findViewById(R.id.userReviewsScroll).findViewById(R.id.userReviewsLayout);
-
         for (AddReviewActivity.Review review : reviews) {
-            // Create new ImageView and other UI elements to display the review
+            double tempRating;
+            try {
+                tempRating = Double.parseDouble(review.getScore());
+            } catch (NumberFormatException e) {
+                tempRating = 0.0;
+            }
+
+            final double rating = tempRating;
+
             ImageView imageView = new ImageView(this);
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                    (int) getResources().getDimension(R.dimen.image_width),
+                    (int) getResources().getDimension(R.dimen.image_height)
+            );
+            layoutParams.setMargins(0, 0, 8, 0); // Ensure consistent margin like static images
+            imageView.setLayoutParams(layoutParams);
             Glide.with(this).load(review.getPosterUrl()).into(imageView);
             userReviewsLayout.addView(imageView);
+
+            imageView.setOnClickListener(v -> {
+                launchReviewActivity(
+                        review.getTitle(),
+                        review.getSubtitle(),
+                        review.getReview(),
+                        rating,
+                        review.getPosterUrl()
+                );
+            });
         }
     }
+
+
 
     private ArrayList<AddReviewActivity.Review> loadReviewsFromJSON() {
         ArrayList<AddReviewActivity.Review> reviews = new ArrayList<>();
@@ -198,8 +224,20 @@ public class MainMenuActivity extends AppCompatActivity {
         return reviews;
     }
 
+    private void launchReviewActivity(String title, String subtitle, String reviewText, double rating, String imageUrl) {
+        Intent intent = new Intent(this, ReviewActivity.class);
+        intent.putExtra("IS_JSON_REVIEW", true);
+        intent.putExtra("TITLE", title);
+        intent.putExtra("SUBTITLE", subtitle);
+        intent.putExtra("REVIEW_TEXT", reviewText);
+        intent.putExtra("RATING", rating);
+        intent.putExtra("IMAGE_URL", imageUrl);
+        startActivity(intent);
+    }
+
     private void launchReviewActivity(int titleResId, int subtitleResId, int reviewResId, double rating, String imageUrl) {
         Intent intent = new Intent(this, ReviewActivity.class);
+        intent.putExtra("IS_JSON_REVIEW", false);
         intent.putExtra("TITLE_RES_ID", titleResId);
         intent.putExtra("SUBTITLE_RES_ID", subtitleResId);
         intent.putExtra("REVIEW_RES_ID", reviewResId);
@@ -208,7 +246,11 @@ public class MainMenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    public static void closeMainMenu() {
+        if (instance != null) {
+            instance.finish();
+        }
+    }
 
 
 

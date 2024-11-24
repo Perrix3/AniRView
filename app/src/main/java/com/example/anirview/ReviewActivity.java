@@ -37,18 +37,30 @@ public class ReviewActivity extends AppCompatActivity {
 
         // Get data from Intent
         Intent intent = getIntent();
-        int titleResId = intent.getIntExtra("TITLE_RES_ID", 0);
-        int subtitleResId = intent.getIntExtra("SUBTITLE_RES_ID", 0);
-        int reviewResId = intent.getIntExtra("REVIEW_RES_ID", 0);
-        double rating = intent.getDoubleExtra("RATING", 0.0);
-        String imageUrl = intent.getStringExtra("IMAGE_URL");
+        boolean isJsonReview = intent.getBooleanExtra("IS_JSON_REVIEW", false);
 
-        // Populate views with data
-        if (titleResId != 0) animeTitle.setText(titleResId);
-        if (subtitleResId != 0) animeSubtitle.setText(subtitleResId);
-        if (reviewResId != 0) animeReview.setText(reviewResId);
+        if (isJsonReview) {
+            // Load JSON-based review
+            String title = intent.getStringExtra("TITLE");
+            String subtitle = intent.getStringExtra("SUBTITLE");
+            String reviewText = intent.getStringExtra("REVIEW_TEXT");
+            String imageUrl = intent.getStringExtra("IMAGE_URL");
 
-        // Load banner image using Glide
-        Glide.with(this).load(imageUrl).into(bannerImage);
+            animeTitle.setText(title);
+            animeSubtitle.setText(subtitle);
+            animeReview.setText(reviewText);
+            Glide.with(this).load(imageUrl).into(bannerImage);
+        } else {
+            // Load static resource-based review
+            int titleResId = intent.getIntExtra("TITLE_RES_ID", 0);
+            int subtitleResId = intent.getIntExtra("SUBTITLE_RES_ID", 0);
+            int reviewResId = intent.getIntExtra("REVIEW_RES_ID", 0);
+            String imageUrl = intent.getStringExtra("IMAGE_URL");
+
+            if (titleResId != 0) animeTitle.setText(titleResId);
+            if (subtitleResId != 0) animeSubtitle.setText(subtitleResId);
+            if (reviewResId != 0) animeReview.setText(reviewResId);
+            Glide.with(this).load(imageUrl).into(bannerImage);
+        }
     }
 }

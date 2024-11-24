@@ -99,18 +99,21 @@ android:layout_marginStart="16dp" />
 
     <HorizontalScrollView
         android:id="@+id/userReviewsScroll"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="161dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/userReviewsLabel">
+        app:layout_constraintTop_toBottomOf="@id/userReviewsLabel"
+        >
 
         <LinearLayout
             android:id="@+id/userReviewsLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="0dp"
+            android:layout_margin="0dp">
 
             <!-- Fotos -->
             <ImageView
