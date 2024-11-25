@@ -34,6 +34,7 @@ public class ReviewActivity extends AppCompatActivity {
         TextView animeTitle = findViewById(R.id.animeTitle);
         TextView animeSubtitle = findViewById(R.id.animeSubtitle);
         TextView animeReview = findViewById(R.id.animeReview);
+        TextView animeScore = findViewById(R.id.scoreNumber);
 
         // Get data from Intent
         Intent intent = getIntent();
@@ -45,10 +46,12 @@ public class ReviewActivity extends AppCompatActivity {
             String subtitle = intent.getStringExtra("SUBTITLE");
             String reviewText = intent.getStringExtra("REVIEW_TEXT");
             String imageUrl = intent.getStringExtra("IMAGE_URL");
+            String rating = intent.getStringExtra("RATING");
 
             animeTitle.setText(title);
             animeSubtitle.setText(subtitle);
             animeReview.setText(reviewText);
+            animeScore.setText(rating);
             Glide.with(this).load(imageUrl).into(bannerImage);
         } else {
             // Load static resource-based review
@@ -56,10 +59,13 @@ public class ReviewActivity extends AppCompatActivity {
             int subtitleResId = intent.getIntExtra("SUBTITLE_RES_ID", 0);
             int reviewResId = intent.getIntExtra("REVIEW_RES_ID", 0);
             String imageUrl = intent.getStringExtra("IMAGE_URL");
+            String rating = intent.getStringExtra("RATING");
+
 
             if (titleResId != 0) animeTitle.setText(titleResId);
             if (subtitleResId != 0) animeSubtitle.setText(subtitleResId);
             if (reviewResId != 0) animeReview.setText(reviewResId);
+            animeScore.setText(rating);
             Glide.with(this).load(imageUrl).into(bannerImage);
         }
     }

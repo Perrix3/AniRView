@@ -38,8 +38,9 @@
     <string name="RNeon">Neon Genesis Evangelion mezcla varios géneros, principalmente mecha, drama psicológico, ciencia ficción y terror psicológico. La serie sigue a Shinji Ikari, quien pilota un EVA para luchar contra los Ángeles, pero lo que realmente destaca es el enfoque en los traumas y conflictos internos de los personajes. Además, incluye elementos de religión y filosofía, haciendo de la trama algo mucho más complejo que solo batallas. Es un anime que te hace reflexionar sobre la naturaleza humana y la existencia.</string>
     <string name="cancel">Cancelar</string>
     <string name="add">¡Revisa tu anime favorito!</string>
+    <string name="score">"Puntuación: "</string>
     <string name="titleHint">Titulo del Anime</string>
-    <string name="scoreHint">Puntuación (0 a 5)</string>
+    <string name="scoreHint">Puntuación (0 a 9)</string>
     <string name="subHint">Fecha de Estreno, Generos, Episodios</string>
     <string name="yourHint">Tu Reseña</string>
     <string name="posterHint">URL del Poster</string>

@@ -57,10 +57,11 @@
     <string name="teamReviews">Nuevas reseñas en el equipo</string>
     <string name="userReviews">Reseñas de usuarios</string>
     <string name="add">Review your favourite anime!</string>
+    <string name="score">Score: </string>
 
     <!-- Hints -->
     <string name="titleHint">Anime Title</string>
-    <string name="scoreHint">Score (0 to 5)</string>
+    <string name="scoreHint">Score (0 to 9)</string>
     <string name="subHint">Date Released, Genres, Episodes</string>
     <string name="yourHint">Your Review</string>
     <string name="posterHint">Poster URL</string>

@@ -111,7 +111,7 @@ public class MainMenuActivity extends AppCompatActivity {
                     R.string.rSlime,
                     R.string.sSlime,
                     R.string.RSlime,
-                    4.0,
+                    "8",
                     imageUrl
             );
         });
@@ -121,7 +121,7 @@ public class MainMenuActivity extends AppCompatActivity {
                     R.string.rFate,
                     R.string.sFate,
                     R.string.RFate,
-                    4.5,
+                    "6",
                     imageUrl2
             );
         });
@@ -131,7 +131,7 @@ public class MainMenuActivity extends AppCompatActivity {
                     R.string.rNokotan,
                     R.string.sNokotan,
                     R.string.RNokotan,
-                    4.5,
+                    "9",
                     imageUrl3
             );
         });
@@ -141,7 +141,7 @@ public class MainMenuActivity extends AppCompatActivity {
                     R.string.rJJK,
                     R.string.sJJK,
                     R.string.RJJK,
-                    4.5,
+                    "8",
                     imageUrl4
             );
         });
@@ -151,7 +151,7 @@ public class MainMenuActivity extends AppCompatActivity {
                     R.string.rEva,
                     R.string.sNeon,
                     R.string.RNeon,
-                    4.5,
+                    "9",
                     imageUrl5
             );
         });
@@ -161,7 +161,7 @@ public class MainMenuActivity extends AppCompatActivity {
                     R.string.rPanzer,
                     R.string.sPanzer,
                     R.string.RPanzer,
-                    4.5,
+                    "5",
                     imageUrl6
             );
         });
@@ -172,14 +172,8 @@ public class MainMenuActivity extends AppCompatActivity {
         ArrayList<AddReviewActivity.Review> reviews = loadReviewsFromJSON();
 
         for (AddReviewActivity.Review review : reviews) {
-            double tempRating;
-            try {
-                tempRating = Double.parseDouble(review.getScore());
-            } catch (NumberFormatException e) {
-                tempRating = 0.0;
-            }
 
-            final double rating = tempRating;
+
 
             ImageView imageView = new ImageView(this);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
@@ -196,7 +190,7 @@ public class MainMenuActivity extends AppCompatActivity {
                         review.getTitle(),
                         review.getSubtitle(),
                         review.getReview(),
-                        rating,
+                        review.getScore(),
                         review.getPosterUrl()
                 );
             });
@@ -224,7 +218,7 @@ public class MainMenuActivity extends AppCompatActivity {
         return reviews;
     }
 
-    private void launchReviewActivity(String title, String subtitle, String reviewText, double rating, String imageUrl) {
+    private void launchReviewActivity(String title, String subtitle, String reviewText, String rating, String imageUrl) {
         Intent intent = new Intent(this, ReviewActivity.class);
         intent.putExtra("IS_JSON_REVIEW", true);
         intent.putExtra("TITLE", title);
@@ -235,7 +229,7 @@ public class MainMenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void launchReviewActivity(int titleResId, int subtitleResId, int reviewResId, double rating, String imageUrl) {
+    private void launchReviewActivity(int titleResId, int subtitleResId, int reviewResId, String rating, String imageUrl) {
         Intent intent = new Intent(this, ReviewActivity.class);
         intent.putExtra("IS_JSON_REVIEW", false);
         intent.putExtra("TITLE_RES_ID", titleResId);
