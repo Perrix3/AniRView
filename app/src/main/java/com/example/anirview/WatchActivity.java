@@ -45,13 +45,13 @@ public class WatchActivity extends AppCompatActivity {
 
         TextView amazon=findViewById(R.id.amazonPrimeLink);
         amazon.setOnClickListener(v->{
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.disneyplus.com/"));
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.amazon.com/gp/video/storefront/"));
             startActivity(browserIntent);
         });
 
         TextView disney=findViewById(R.id.disneyPlusLink);
         disney.setOnClickListener(v->{
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.amazon.com/gp/video/storefront/"));
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.disneyplus.com/"));
             startActivity(browserIntent);
         });
 
