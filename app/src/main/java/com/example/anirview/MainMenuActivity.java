@@ -9,11 +9,13 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -25,11 +27,14 @@ public class MainMenuActivity extends AppCompatActivity {
     private static MainMenuActivity instance;
     private LinearLayout userReviewsLayout;
     private static final String FILENAME = "reviews.json";
+    private sesion userSession;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+
+        userSession = new sesion(this);
 
         instance=this;
         userReviewsLayout = findViewById(R.id.userReviewsLayout);
@@ -39,6 +44,8 @@ public class MainMenuActivity extends AppCompatActivity {
         icon3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                userSession.resetSesion();
+                Toast.makeText(MainMenuActivity.this, "Signing out...", Toast.LENGTH_SHORT).show();
                 // Start the MainActivity on click
                 Intent intent = new Intent(MainMenuActivity.this, MainActivity.class);
                 startActivity(intent);
@@ -73,36 +80,42 @@ public class MainMenuActivity extends AppCompatActivity {
         String imageUrl = "https://static.wikia.nocookie.net/wikiseriesjaponesas/images/f/fd/Tensei_shitara_Slime_Datta_Ken_%28Anime%29.jpg/revision/latest?cb=20181207131602&path-prefix=es";
         Glide.with(this)
                 .load(imageUrl)
+                .transform(new RoundedCorners(64))
                 .into(imageView);
 
         ImageView imageView2 = findViewById(R.id.reviewImage2);
         String imageUrl2 = "https://static.wikia.nocookie.net/typemoon/images/a/a1/Apocrypha_NL3.png/revision/latest/scale-to-width-down/250?cb=20180120020655&path-prefix=es";
         Glide.with(this)
                 .load(imageUrl2)
+                .transform(new RoundedCorners(64))
                 .into(imageView2);
 
         ImageView imageView3 = findViewById(R.id.reviewImage3);
         String imageUrl3 = "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/6533e54a54f7a69c806920607bc8238e.jpg";
         Glide.with(this)
                 .load(imageUrl3)
+                .transform(new RoundedCorners(64))
                 .into(imageView3);
 
         ImageView imageView4 = findViewById(R.id.userReviewImage1);
         String imageUrl4 = "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe";
         Glide.with(this)
                 .load(imageUrl4)
+                .transform(new RoundedCorners(64))
                 .into(imageView4);
 
         ImageView imageView5 = findViewById(R.id.userReviewImage2);
         String imageUrl5 = "https://www.justwatch.com/images/poster/112066193/s718/neon-genesis-evangelion.jpg";
         Glide.with(this)
                 .load(imageUrl5)
+                .transform(new RoundedCorners(64))
                 .into(imageView5);
 
         ImageView imageView6 = findViewById(R.id.userReviewImage3);
         String imageUrl6 = "https://upload.wikimedia.org/wikipedia/en/f/f0/Girls_und_Panzer_TV_key_visual.png";
         Glide.with(this)
                 .load(imageUrl6)
+                .transform(new RoundedCorners(64))
                 .into(imageView6);
 
         // Set up click listeners for each anime
@@ -173,8 +186,6 @@ public class MainMenuActivity extends AppCompatActivity {
 
         for (AddReviewActivity.Review review : reviews) {
 
-
-
             ImageView imageView = new ImageView(this);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
                     (int) getResources().getDimension(R.dimen.image_width),
@@ -182,7 +193,7 @@ public class MainMenuActivity extends AppCompatActivity {
             );
             layoutParams.setMargins(0, 0, 8, 0); // Ensure consistent margin like static images
             imageView.setLayoutParams(layoutParams);
-            Glide.with(this).load(review.getPosterUrl()).into(imageView);
+            Glide.with(this).load(review.getPosterUrl()).transform(new RoundedCorners(64)).into(imageView);
             userReviewsLayout.addView(imageView);
 
             imageView.setOnClickListener(v -> {

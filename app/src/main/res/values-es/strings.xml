@@ -2,6 +2,7 @@
 <resources>
     <string name="iBack">Icono de flecha</string>
     <string name="iHeart">Icono de Corazón</string>
+    <string name="iSignOut">Icono de Cerrar sesión</string>
     <string name="rSlime">Tensei Shitara Slime Datta Ken</string>
     <string name="rJJK">Jujutsu Kaisen</string>
     <string name="rFate">Fate/Apocrypha</string>

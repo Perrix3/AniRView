@@ -23,11 +23,14 @@ public class LogInActivity extends AppCompatActivity {
     private EditText emailInput, passwordInput;
     private TextView forgotPassword;
     private final String FILE_NAME = "users.json";
+    private sesion userSession;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio_sesion);
+
+        userSession = new sesion(this);
 
         emailInput = findViewById(R.id.emailInput);
         passwordInput = findViewById(R.id.passwordInput);
@@ -84,6 +87,8 @@ public class LogInActivity extends AppCompatActivity {
             JSONArray usersArray = readUsersFromFile();
 
             boolean userFound = false;
+            JSONObject loggedInUser = null;
+
             for (int i = 0; i < usersArray.length(); i++) {
                 JSONObject user = usersArray.getJSONObject(i);
                 String storedEmail = user.getString("email");
@@ -91,12 +96,18 @@ public class LogInActivity extends AppCompatActivity {
 
                 if (storedEmail.equals(email) && storedPassword.equals(password)) {
                     userFound = true;
+                    loggedInUser = user;
                     break;
                 }
             }
 
-            if (userFound) {
+            if (userFound && loggedInUser != null) {
                 Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show();
+
+                // Save session using the sesion class
+                userSession.setUser(loggedInUser.getString("email")); // Save user email
+                userSession.open(); // Mark session as active
+
                 // Go to MainMenuActivity after successful login
                 Intent intent = new Intent(LogInActivity.this, MainMenuActivity.class);
                 startActivity(intent);
@@ -111,7 +122,6 @@ public class LogInActivity extends AppCompatActivity {
         }
     }
 
-// Reads the json
     private JSONArray readUsersFromFile() throws IOException, JSONException {
         FileInputStream fis = openFileInput(FILE_NAME);
         int size = fis.available();

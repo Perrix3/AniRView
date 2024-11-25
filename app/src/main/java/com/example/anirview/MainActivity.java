@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 
@@ -31,16 +33,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Button to go to Main Menu
-        Button startButton = findViewById(R.id.startButton);
-        startButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Start the MainMenuActivity on click
-                Intent intent = new Intent(MainActivity.this, MainMenuActivity.class);
-                startActivity(intent);
-            }
-        });
+        sesion userSession = new sesion(getApplicationContext());
 
         // Button to go to Log In
         Button loginButton = findViewById(R.id.loginButton);
@@ -48,19 +41,32 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Start the LogInActivity on click
-                Intent intent = new Intent(MainActivity.this, LogInActivity.class);
-                startActivity(intent);
+                if(userSession.getOpen()){
+                    Toast.makeText(MainActivity.this, "Logged in as "+userSession.getUser(), Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, MainMenuActivity.class);
+                    startActivity(intent);
+                } else{
+                    Intent intent = new Intent(MainActivity.this, LogInActivity.class);
+                    startActivity(intent);
+                }
+
             }
         });
 
-        // BUtton to go to Register
+        // Button to go to Register
         Button registerButton = findViewById(R.id.registerButton);
         registerButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 // Start the RegisterActivity on click
-                Intent intent=new Intent(MainActivity.this, RegisterActivity.class);
-                startActivity(intent);
+                if(userSession.getOpen()){
+                    Toast.makeText(MainActivity.this, "Logged in as "+userSession.getUser(), Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, MainMenuActivity.class);
+                    startActivity(intent);
+                } else {
+                    Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                    startActivity(intent);
+                }
             }
         });
         ImageView imageView1 = findViewById(R.id.profileImage);

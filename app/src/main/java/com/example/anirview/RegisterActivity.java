@@ -23,11 +23,14 @@ public class RegisterActivity extends AppCompatActivity {
 
     private EditText emailInput, passwordInput;
     private final String FILE_NAME = "users.json";
+    private sesion userSession;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
+
+        userSession = new sesion(this);
 
         emailInput = findViewById(R.id.emailInputRegister);
         passwordInput = findViewById(R.id.passwordInputRegister);
@@ -92,9 +95,14 @@ public class RegisterActivity extends AppCompatActivity {
             // Save user list
             saveUsersToFile(usersArray);
 
+            // Sets the data for the session
+            userSession.setUser(email);
+            userSession.open();
+
             Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show();
             emailInput.setText("");
             passwordInput.setText("");
+
             Intent intent = new Intent(RegisterActivity.this, MainMenuActivity.class);
             startActivity(intent);
 
